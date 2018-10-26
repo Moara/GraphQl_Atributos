@@ -1,0 +1,20 @@
+//Realiza uma busca por todos os projetos de uma determinada linguagem de Programação (no caso: PHP). 
+//Retorna o nome dos 3 primeiros projetos, a descrição, a Url, quantidade de Fork, e a data de criação do projeto.
+
+query{
+  search (query: "language:php", type:REPOSITORY, first:3) {
+    repositoryCount
+    edges{
+      node{
+        ...on Repository {
+          name
+          description
+          url
+          forkCount
+          createdAt
+            }
+          }
+          }
+        }
+        
+      }
