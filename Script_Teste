@@ -1,0 +1,38 @@
+query {
+  search(query: "language:java", 
+    type: REPOSITORY, 
+    first: 3) {
+    repositoryCount
+    codeCount
+    edges {
+      node {
+        ... on Repository {
+          name
+          description
+          projectsUrl 
+          updatedAt 
+          homepageUrl
+          
+          assignableUsers (first: 10){
+            edges{
+              node{
+                name
+                avatarUrl
+              }
+            }
+          }
+          
+          
+          issues (first: 10){
+            edges{
+              node{
+                title
+              }
+            }
+          }
+          
+          }
+          }
+          }
+          }
+        }
